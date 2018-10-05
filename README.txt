@@ -1,7 +1,4 @@
-# Welcome to the Arches Project!
-
-Arches is a new, open-source, web-based, geospatial information system for cultural heritage inventory and management. Arches is purpose-built for the international cultural heritage field, and it is designed to record all types of immovable heritage, including archaeological sites, buildings and other historic structures, landscapes, and heritage ensembles or districts.
-
-Please see the [project page](http://archesproject.org/) for more information on the Arches project.
-
-The Arches Installation Guide and Arches User Guide are available [here](http://archesproject.org/documentation/).
+# To get started with this project:
+1. Clone the repo: `$ git clone https://github.com/archesproject/arches-dev-training-project.git`
+2. With your virtual environment activated (with arches installed) `cd` into the into the cloned repo and setup your db and index by running `$(env) python manage.py packages -o setup_db`
+3. Next run `$ python manage.py runserver`
