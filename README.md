@@ -6,6 +6,7 @@
 
 ### To load the address extensions
 
-1. `$ python manage.py widget register -s arches_dev_training/widgets/geocoder.json`
-2. `$ python manage.py datatype register -s arches_dev_training/datatypes/address.py`
-3. `python manage.py report register -s arches_dev_training/reports/address-report.json` 
+1. `$(env) python manage.py widget register -s arches_dev_training/widgets/geocoder.json`
+2. `$(env) python manage.py datatype register -s arches_dev_training/datatypes/address.py`
+3. `$(env) python manage.py report register -s arches_dev_training/reports/address-report.json` 
+4. `$(env) python manage.py card_component register -s arches_dev_training/card_components/address-card.json`
