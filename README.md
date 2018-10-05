@@ -10,3 +10,5 @@
 2. `$(env) python manage.py datatype register -s arches_dev_training/datatypes/address.py`
 3. `$(env) python manage.py report register -s arches_dev_training/reports/address-report.json` 
 4. `$(env) python manage.py card_component register -s arches_dev_training/card_components/address-card.json`
+
+***Be sure that you have your mapbox api key saved in your system settings***
