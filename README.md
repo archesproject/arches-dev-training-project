@@ -8,3 +8,4 @@
 
 1. `$ python manage.py widget register -s arches_dev_training/widgets/geocoder.json`
 2. `$ python manage.py datatype register -s arches_dev_training/datatypes/address.py`
+3. `python manage.py report register -s arches_dev_training/reports/address-report.json` 
