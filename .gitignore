@@ -1,3 +1,5 @@
 *.pyc
 resource_import.log
 arches_dev_training/logs
+arches_dev_training/node_modules
+arches_dev_training/media/packages
