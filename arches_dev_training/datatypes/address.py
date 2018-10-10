@@ -2,7 +2,7 @@ from arches.app.datatypes.base import BaseDataType
 
 details = {
     'datatype': 'address',
-    'iconclass': 'fa fa-file-code-o',
+    'iconclass': 'fa fa-location-arrow',
     'modulename': 'datatypes.py',
     'classname': 'AddressDataType',
     'defaultwidget': None,
