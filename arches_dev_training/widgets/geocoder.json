@@ -1,9 +1,5 @@
 {
-    "name": "geocoder",
-    "component": "views/components/widgets/geocoder",
     "defaultconfig": {
         "placeholder": "Find an address..."
     },
-    "helptext": null,
-    "datatype": "address"
 }
