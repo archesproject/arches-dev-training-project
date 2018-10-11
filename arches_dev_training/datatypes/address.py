@@ -17,10 +17,27 @@ details = {
 class AddressDataType(BaseDataType):
 
     def validate(self, value, source=None):
-        return []
+        errors = []
+        message = 'datatype: address, value: {1} {2} - missing required properties. This data was not imported.'
+        try:
+            value['address']
+            value['x']
+            value['y']
+        except KeyError:
+            errors.append({
+                'type': 'ERROR',
+                'message': message.format(value, source)
+            })
+
+        return errors
 
     def append_to_document(self, document, nodevalue, nodeid, tile):
-        return
+        document['strings'].append({
+            'string': nodevalue['address'],
+            'nodegroup_id': tile.nodegroup_id
+        })
 
     def get_search_terms(self, nodevalue, nodeid=None):
-        return []
+        return [
+            nodevalue['address']
+        ]
