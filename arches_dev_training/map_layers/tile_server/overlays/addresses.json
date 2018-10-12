@@ -25,9 +25,7 @@
                     "port": "5432"
                 },
                 "simplify": 0.5,
-                "queries": [
-                    "select gid as __id__, address, icon, geom as __geometry__ from addresses"
-                ]
+                "queries": ["select * from addresses"]
             }
         },
         "allowed origin": "*",
