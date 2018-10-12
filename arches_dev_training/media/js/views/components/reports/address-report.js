@@ -11,9 +11,9 @@ define([
         viewModel: function(params) {
             var self = this;
             params.configKeys = ['icon'];
-            
+
             ReportViewModel.apply(this, [params]);
-            
+
             this.geoJSON = ko.computed(function() {
                 var geoJSON = {
                     'type': 'FeatureCollection',
@@ -36,7 +36,7 @@ define([
                 });
                 return geoJSON;
             });
-            
+
             this.setupMap = function(map) {
                 map.on('load', function () {
                     var geoJSON = self.geoJSON();
@@ -48,7 +48,7 @@ define([
                             });
                         }
                     };
-                    
+
                     map.addSource('address-points', {
                         'type': 'geojson',
                         'data': geoJSON
@@ -65,15 +65,7 @@ define([
                         }
                     });
                     zoomToGeoJSON(geoJSON);
-                    
-                    self.geoJSON.subscribe(function(geoJSON) {
-                        map.getSource('address-points').setData(geoJSON);
-                        zoomToGeoJSON(geoJSON);
-                    });
-                    
-                    self.icon.subscribe(function(icon) {
-                        map.setLayoutProperty('address-points', 'icon-image', icon);
-                    });
+
                 });
             };
         },
