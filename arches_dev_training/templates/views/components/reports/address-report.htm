@@ -4,9 +4,9 @@
 {% block header %}
 <div class="address-report-map" data-bind="mapboxgl: {
     mapOptions: {
-        style: 'mapbox://styles/mapbox/streets-v9'
+        style: ''
     },
-    afterRender: setupMap
+    afterRender: function(){console.log('init map')}
 }"></div>
 {% endblock header %}
 
@@ -23,12 +23,6 @@
                     results: [{
                         text: 'Star',
                         id: 'star-15'
-                    }, {
-                        text: 'Circle',
-                        id: 'circle-15'
-                    }, {
-                        text: 'Triangle',
-                        id: 'triangle-15'
                     }]
                 }
             }
