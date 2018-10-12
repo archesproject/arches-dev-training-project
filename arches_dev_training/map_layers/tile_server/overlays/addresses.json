@@ -1,18 +1,16 @@
 {
     "type": "vector",
-    "layers": [
-        {
-            "id": "addresses",
-            "source": "addresses",
-            "type": "symbol",
-            "layout": {
-                "icon-image": "{icon}",
-                "text-field": "{address}",
-                "text-offset": [0, 0.6],
-                "text-anchor": "top"
-            }
+    "layers": [{
+        "id": "addresses",
+        "source": "addresses",
+        "type": "symbol",
+        "layout": {
+            "icon-image": "{icon}",
+            "text-field": "{address}",
+            "text-offset": [0, 0.6],
+            "text-anchor": "top"
         }
-    ],
+    }],
     "config": {
         "provider": {
             "class": "TileStache.Goodies.VecTiles:Provider",
@@ -29,7 +27,6 @@
             }
         },
         "allowed origin": "*",
-        "compress": true,
         "write cache": false
     }
 }
