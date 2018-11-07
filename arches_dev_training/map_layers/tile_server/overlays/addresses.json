@@ -1,0 +1,32 @@
+{
+    "type": "vector",
+    "layers": [{
+        "id": "addresses",
+        "source": "addresses",
+        "type": "symbol",
+        "layout": {
+            "icon-image": "{icon}",
+            "text-field": "{address}",
+            "text-offset": [0, 0.6],
+            "text-anchor": "top"
+        }
+    }],
+    "config": {
+        "provider": {
+            "class": "TileStache.Goodies.VecTiles:Provider",
+            "kwargs": {
+                "dbinfo": {
+                    "host": "localhost",
+                    "user": "postgres",
+                    "password": "postgis",
+                    "database": "arches",
+                    "port": "5432"
+                },
+                "simplify": 0.5,
+                "queries": ["select * from addresses"]
+            }
+        },
+        "allowed origin": "*",
+        "write cache": false
+    }
+}
