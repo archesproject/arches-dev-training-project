@@ -9,12 +9,7 @@ define([
         viewModel: function(params) {
             var self = this;
             var url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
-            
-            params.valueProperties = ['address','x','y'];
-            params.configKeys = ['placeholder'];
-            
-            WidgetViewModel.apply(this, [params]);
-                        
+
             this.select2Config = {
                 value: this.address,
                 placeholder: this.placeholder,
@@ -55,13 +50,13 @@ define([
                     self.y(null);
                 }
             };
-            
+
             this.displayValue = ko.computed(function() {
                 return self.address();
             });
         },
         template: {
-            require: 'text!templates/views/components/widgets/geocoder.htm'
+            require: ''
         }
     });
 });
