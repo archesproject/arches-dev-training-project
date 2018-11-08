@@ -19,6 +19,21 @@ define([
                     'type': 'FeatureCollection',
                     'features': []
                 };
+                if (self.tile) {
+                    _.each(koMapping.toJS(self.tile.data), function(value) {
+                        if (value && value.address && value.x && value.y) {
+                            geoJSON.features.push({
+                                'properties': {
+                                    'address': value.address
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [value.x, value.y]
+                                }
+                            });
+                        }
+                    });
+                }
                 return geoJSON;
             });
             
